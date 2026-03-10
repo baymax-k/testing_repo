@@ -4,7 +4,8 @@
 
 import express, { type Request, type Response, type NextFunction, type Application } from "express";
 import cors from "cors";
-import helmet from "helmet";
+import * as helmetModule from "helmet";
+const helmet = helmetModule.default;
 import path from "path";
 import { fileURLToPath } from "url";
 import { toNodeHandler } from "better-auth/node";
